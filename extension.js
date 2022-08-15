@@ -5,7 +5,7 @@ const path = require('path');
 /**
  * @param {vscode.ExtensionContext} context
  */
-function activate(context) {
+function activate() {
 	let folders = vscode.workspace.workspaceFolders;
 
 	if (folders) {
@@ -33,17 +33,11 @@ function activate(context) {
 
 			await vscode.workspace.fs.rename(uri, newUri);
 
-
-			// console.log(newUri);
-			// wsedit.createFile(newUri);
-			wsedit.insert(
-				newUri,
-				new vscode.Position(0, 0),
-				selectedTemplate)
+			wsedit.insert(newUri, new vscode.Position(0, 0), selectedTemplate)
+			
 			await vscode.workspace.applyEdit(wsedit);
 		});
 	}
-
 }
 
 // this method is called when your extension is deactivated
