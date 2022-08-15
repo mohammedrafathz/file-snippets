@@ -1,0 +1,14 @@
+[
+  {
+    "name": "raf",
+    "template": [
+      "import React from 'react';",
+      "",
+      "export const {filename} = () => {",
+      "  return (",
+      "     <div>{filename}</div>",
+      "  )",
+      "}"
+    ]
+  }
+]
