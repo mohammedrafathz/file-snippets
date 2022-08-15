@@ -2,6 +2,10 @@
   "name": "file-snippets",
   "displayName": "file-snippets",
   "description": "Creates boilerpates using file names",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohammedrafathz/file-snippets.git"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.70.0"
@@ -14,10 +18,12 @@
   ],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "file-snippets.helloWorld",
-      "title": "Hello World"
-    }]
+    "commands": [
+      {
+        "command": "file-snippets.helloWorld",
+        "title": "Hello World"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
